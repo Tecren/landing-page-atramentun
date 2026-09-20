@@ -1,0 +1,125 @@
+@font-face {
+  font-family: 'Londrina';
+  src: url('./assets/font/londrina/LondrinaSolid-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg-primary: #333333;
+  --bg-secondary: #1e1e1e;
+  --bg-panel: #262626;
+  --accent: #8e7b96;
+  --accent-strong: #a795b1;
+  --accent-deep: #75637f;
+  --accent-soft: rgba(142, 123, 150, 0.14);
+  --accent-border: rgba(142, 123, 150, 0.45);
+  --text: #d9d9d9;
+  --text-dim: #a5a2ab;
+  --border: rgba(217, 217, 217, 0.14);
+  --border-strong: rgba(217, 217, 217, 0.24);
+  --font-display: 'Londrina', 'Arial Narrow', 'Arial Black', sans-serif;
+  --font-body: 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
+  --header-h: 72px;
+  --container: 1180px;
+  --radius: 10px;
+  --radius-lg: 16px;
+  --shadow-panel: 0 30px 60px -30px rgba(0, 0, 0, 0.6);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-h);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--bg-primary);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color-scheme: dark;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  color: var(--text);
+  line-height: 0.98;
+  letter-spacing: 0.01em;
+  margin: 0;
+  text-wrap: balance;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: rgba(142, 123, 150, 0.4);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(142, 123, 150, 0.35);
+  border: 3px solid var(--bg-primary);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(142, 123, 150, 0.6);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
