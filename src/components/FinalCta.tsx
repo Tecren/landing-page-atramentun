@@ -18,9 +18,6 @@ export function FinalCta() {
             {m.cta.title}
           </h2>
         </Reveal>
-        <Reveal delay={0.16}>
-          <p className="cta__desc">{m.cta.desc}</p>
-        </Reveal>
         <Reveal delay={0.24}>
           <div className="cta__actions">
             <Button
